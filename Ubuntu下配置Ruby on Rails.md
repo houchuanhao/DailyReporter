@@ -1,5 +1,5 @@
 # Ubuntu下配置Ruby on Rails
-##1.安装RVM   ( ruby管理工具)
+## 1.安装RVM   ( ruby管理工具)
 
 
 ----------
@@ -14,7 +14,7 @@
 `\curl -sSL https://get.rvm.io | bash -s stable`
 执行以上三条命令之后重启（切记，一定要重启）
 重启后输入`rvm -v`来确认rvm安装成功
-##2.使用rvm安装ruby
+## 2.使用rvm安装ruby
 
 
 ----------
@@ -42,7 +42,7 @@ Please visit https://rvm.io/integration/gnome-terminal/ for an example.
 此时不要慌~
 解决方案:执行`bash --login`
 我这里选择的版本时ruby2.2.6
-##3.用gem安装rails
+## 3.用gem安装rails
 直接`gem install rails`
 可以用`gem list`来查看rails版本
 
@@ -50,7 +50,7 @@ Please visit https://rvm.io/integration/gnome-terminal/ for an example.
 ----------
 
 
-##4.分布式版本控制工具git的使用（可忽略）
+## 4.分布式版本控制工具git的使用（可忽略）
 1.创建目录learngit
 ```
 mkdir learngit
@@ -80,7 +80,7 @@ git status查看版本更新信息
 
 
 ```
-#5创建rails项目
+## 5创建rails项目
 
 ```
 rails new _版本号_ 项目名
@@ -96,7 +96,7 @@ rails new _5.1.0_ learnRails
 ----------
 
 
-#6修改镜像文件---这一步可以略过，但以后的开发过程中会用到
+## 6修改镜像文件---这一步可以略过，但以后的开发过程中会用到
 为了提高效率，我们选择国内的镜像
 修改工程目录下的gamFile文件，具体修改如下图
 ![修改GemFile文件中的gem镜像地址](http://img.blog.csdn.net/20170504190748205?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2VsYTA3MDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
@@ -108,7 +108,7 @@ rails new _5.1.0_ learnRails
 ----------
 
 
-#7运行rails项目
+## 7运行rails项目
 接下来我们就可以运行项目了
 
 ```
@@ -139,4 +139,4 @@ rails s
 在浏览器中输入0.0.0.0:3000
 ![大功告成](img/001.png)
 --------
-#大功告成！
+# 大功告成！
