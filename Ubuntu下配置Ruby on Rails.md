@@ -7,10 +7,13 @@
 
 可以到[RVM的官网](http://www.rvm.io/)去查看RVM的安装命令
 [1]
+
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
 [2]
+
  `sudo apt-get install curl`
 [3]
+
 `\curl -sSL https://get.rvm.io | bash -s stable`
 执行以上三条命令之后重启（切记，一定要重启）
 重启后输入`rvm -v`来确认rvm安装成功
