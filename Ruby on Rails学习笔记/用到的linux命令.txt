@@ -1,0 +1,1494 @@
+rubyhou@ubuntu:~$ rvm get stable
+Downloading https://get.rvm.io
+Could not download rvm-installer, get some help at #rvm IRC channel at freenode servers.
+rubyhou@ubuntu:~$ rvm list known
+# MRI Rubies
+[ruby-]1.8.6[-p420]
+[ruby-]1.8.7[-head] # security released on head
+[ruby-]1.9.1[-p431]
+[ruby-]1.9.2[-p330]
+[ruby-]1.9.3[-p551]
+[ruby-]2.0.0[-p648]
+[ruby-]2.1[.10]
+[ruby-]2.2[.6]
+[ruby-]2.3[.3]
+[ruby-]2.4[.0]
+ruby-head
+
+# for forks use: rvm install ruby-head-<name> --url https://github.com/github/ruby.git --branch 2.2
+
+# JRuby
+jruby-1.6[.8]
+jruby-1.7[.26]
+jruby[-9.1.7.0]
+jruby-head
+
+# Rubinius
+rbx-1[.4.3]
+rbx-2.3[.0]
+rbx-2.4[.1]
+rbx-2[.5.8]
+rbx[-3.71]
+rbx-head
+
+# Opal
+opal
+
+# Minimalistic ruby implementation - ISO 30170:2012
+mruby-1.0.0
+mruby-1.1.0
+mruby-1[.2.0]
+mruby[-head]
+
+# Ruby Enterprise Edition
+ree-1.8.6
+ree[-1.8.7][-2012.02]
+
+# Topaz
+topaz
+
+# MagLev
+maglev[-head]
+maglev-1.0.0
+
+# Mac OS X Snow Leopard Or Newer
+macruby-0.10
+macruby-0.11
+macruby[-0.12]
+macruby-nightly
+macruby-head
+
+# IronRuby
+ironruby[-1.1.3]
+ironruby-head
+rubyhou@ubuntu:~$ rvm install 2.2
+Searching for binary rubies, this might take some time.
+Found remote file https://rvm_io.global.ssl.fastly.net/binaries/ubuntu/16.04/x86_64/ruby-2.2.6.tar.bz2
+Checking requirements for ubuntu.
+Installing requirements for ubuntu.
+Updating systemrubyhou password required for 'apt-get --quiet --yes update': 
+1rubyhou password required for 'apt-get --quiet --yes update': 
+.....
+Installing required packages: gawk, libssl-dev, zlib1g-dev, libyaml-dev, libsqlite3-dev, sqlite3, autoconf, libgmp-dev, libgdbm-dev, libncurses5-dev, automake, libtool, bison, libffi-dev, libgmp-dev, libreadline6-dev................
+Requirements installation successful.
+ruby-2.2.6 - #configure
+ruby-2.2.6 - #download
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 22.8M  100 22.8M    0     0   385k      0  0:01:00  0:01:00 --:--:--  521k
+ruby-2.2.6 - #validate archive
+ruby-2.2.6 - #extract
+ruby-2.2.6 - #validate binary
+ruby-2.2.6 - #setup
+ruby-2.2.6 - #gemset created /home/rubyhou/.rvm/gems/ruby-2.2.6@global
+ruby-2.2.6 - #importing gemset /home/rubyhou/.rvm/gemsets/global.gems...........
+ruby-2.2.6 - #generating global wrappers........
+ruby-2.2.6 - #gemset created /home/rubyhou/.rvm/gems/ruby-2.2.6
+ruby-2.2.6 - #importing gemsetfile /home/rubyhou/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.2.6 - #generating default wrappers........
+rubyhou@ubuntu:~$ ruby list
+The program 'ruby' is currently not installed. You can install it by typing:
+sudo apt install ruby
+rubyhou@ubuntu:~$ rvm list
+
+rvm rubies
+
+   ruby-2.2.6 [ x86_64 ]
+
+# Default ruby not set. Try 'rvm alias create default <ruby>'.
+
+# => - current
+# =* - current && default
+#  * - default
+
+rubyhou@ubuntu:~$ rvm use 2.2.6
+
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+
+rubyhou@ubuntu:~$ rvm list
+
+rvm rubies
+
+   ruby-2.2.6 [ x86_64 ]
+
+# Default ruby not set. Try 'rvm alias create default <ruby>'.
+
+# => - current
+# =* - current && default
+#  * - default
+
+rubyhou@ubuntu:~$ rvm use 2.2
+
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
+
+rubyhou@ubuntu:~$ bash login
+/bin/login: /bin/login: cannot execute binary file
+rubyhou@ubuntu:~$ bash --login
+rubyhou@ubuntu:~$ rvm use 2.2.6
+Using /home/rubyhou/.rvm/gems/ruby-2.2.6
+rubyhou@ubuntu:~$ rvm -v
+rvm 1.29.1 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+rubyhou@ubuntu:~$ rvm use 2.2.6 --default
+Using /home/rubyhou/.rvm/gems/ruby-2.2.6
+rubyhou@ubuntu:~$ rvm list
+
+rvm rubies
+
+=* ruby-2.2.6 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+
+rubyhou@ubuntu:~$ gem install rails
+Fetching: concurrent-ruby-1.0.5.gem (100%)
+Successfully installed concurrent-ruby-1.0.5
+Fetching: minitest-5.10.1.gem (100%)
+Successfully installed minitest-5.10.1
+Fetching: thread_safe-0.3.6.gem (100%)
+Successfully installed thread_safe-0.3.6
+Fetching: tzinfo-1.2.3.gem (100%)
+Successfully installed tzinfo-1.2.3
+Fetching: i18n-0.8.1.gem (100%)
+Successfully installed i18n-0.8.1
+Fetching: activesupport-5.1.0.gem (100%)
+Successfully installed activesupport-5.1.0
+Fetching: mini_portile2-2.1.0.gem (100%)
+Successfully installed mini_portile2-2.1.0
+Fetching: nokogiri-1.7.1.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed nokogiri-1.7.1
+Fetching: rails-dom-testing-2.0.2.gem (100%)
+Successfully installed rails-dom-testing-2.0.2
+Fetching: loofah-2.0.3.gem (100%)
+Successfully installed loofah-2.0.3
+Fetching: rails-html-sanitizer-1.0.3.gem (100%)
+Successfully installed rails-html-sanitizer-1.0.3
+Fetching: erubi-1.6.0.gem (100%)
+Successfully installed erubi-1.6.0
+Fetching: builder-3.2.3.gem (100%)
+Successfully installed builder-3.2.3
+Fetching: actionview-5.1.0.gem (100%)
+Successfully installed actionview-5.1.0
+Fetching: rack-2.0.1.gem (100%)
+Successfully installed rack-2.0.1
+Fetching: rack-test-0.6.3.gem (100%)
+Successfully installed rack-test-0.6.3
+Fetching: actionpack-5.1.0.gem (100%)
+Successfully installed actionpack-5.1.0
+Fetching: sprockets-3.7.1.gem (100%)
+Successfully installed sprockets-3.7.1
+Fetching: sprockets-rails-3.2.0.gem (100%)
+Successfully installed sprockets-rails-3.2.0
+Fetching: bundler-1.14.6.gem (100%)
+Successfully installed bundler-1.14.6
+Fetching: method_source-0.8.2.gem (100%)
+Successfully installed method_source-0.8.2
+Fetching: thor-0.19.4.gem (100%)
+Successfully installed thor-0.19.4
+Fetching: railties-5.1.0.gem (100%)
+Successfully installed railties-5.1.0
+Fetching: websocket-extensions-0.1.2.gem (100%)
+Successfully installed websocket-extensions-0.1.2
+Fetching: websocket-driver-0.6.5.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed websocket-driver-0.6.5
+Fetching: nio4r-2.0.0.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed nio4r-2.0.0
+Fetching: actioncable-5.1.0.gem (100%)
+Successfully installed actioncable-5.1.0
+Fetching: globalid-0.4.0.gem (100%)
+Successfully installed globalid-0.4.0
+Fetching: activejob-5.1.0.gem (100%)
+Successfully installed activejob-5.1.0
+Fetching: mime-types-data-3.2016.0521.gem (100%)
+Successfully installed mime-types-data-3.2016.0521
+Fetching: mime-types-3.1.gem (100%)
+Successfully installed mime-types-3.1
+Fetching: mail-2.6.5.gem (100%)
+Successfully installed mail-2.6.5
+Fetching: actionmailer-5.1.0.gem (100%)
+Successfully installed actionmailer-5.1.0
+Fetching: arel-8.0.0.gem (100%)
+Successfully installed arel-8.0.0
+Fetching: activemodel-5.1.0.gem (100%)
+Successfully installed activemodel-5.1.0
+Fetching: activerecord-5.1.0.gem (100%)
+Successfully installed activerecord-5.1.0
+Fetching: rails-5.1.0.gem (100%)
+Successfully installed rails-5.1.0
+Parsing documentation for concurrent-ruby-1.0.5
+Installing ri documentation for concurrent-ruby-1.0.5
+Parsing documentation for minitest-5.10.1
+Installing ri documentation for minitest-5.10.1
+Parsing documentation for thread_safe-0.3.6
+Installing ri documentation for thread_safe-0.3.6
+Parsing documentation for tzinfo-1.2.3
+Installing ri documentation for tzinfo-1.2.3
+Parsing documentation for i18n-0.8.1
+Installing ri documentation for i18n-0.8.1
+Parsing documentation for activesupport-5.1.0
+Installing ri documentation for activesupport-5.1.0
+Parsing documentation for mini_portile2-2.1.0
+Installing ri documentation for mini_portile2-2.1.0
+Parsing documentation for nokogiri-1.7.1
+Installing ri documentation for nokogiri-1.7.1
+Parsing documentation for rails-dom-testing-2.0.2
+Installing ri documentation for rails-dom-testing-2.0.2
+Parsing documentation for loofah-2.0.3
+Installing ri documentation for loofah-2.0.3
+Parsing documentation for rails-html-sanitizer-1.0.3
+Installing ri documentation for rails-html-sanitizer-1.0.3
+Parsing documentation for erubi-1.6.0
+Installing ri documentation for erubi-1.6.0
+Parsing documentation for builder-3.2.3
+Installing ri documentation for builder-3.2.3
+Parsing documentation for actionview-5.1.0
+Installing ri documentation for actionview-5.1.0
+Parsing documentation for rack-2.0.1
+Installing ri documentation for rack-2.0.1
+Parsing documentation for rack-test-0.6.3
+Installing ri documentation for rack-test-0.6.3
+Parsing documentation for actionpack-5.1.0
+Installing ri documentation for actionpack-5.1.0
+Parsing documentation for sprockets-3.7.1
+Installing ri documentation for sprockets-3.7.1
+Parsing documentation for sprockets-rails-3.2.0
+Installing ri documentation for sprockets-rails-3.2.0
+Parsing documentation for bundler-1.14.6
+Installing ri documentation for bundler-1.14.6
+Parsing documentation for method_source-0.8.2
+Installing ri documentation for method_source-0.8.2
+Parsing documentation for thor-0.19.4
+Installing ri documentation for thor-0.19.4
+Parsing documentation for railties-5.1.0
+Installing ri documentation for railties-5.1.0
+Parsing documentation for websocket-extensions-0.1.2
+Installing ri documentation for websocket-extensions-0.1.2
+Parsing documentation for websocket-driver-0.6.5
+Installing ri documentation for websocket-driver-0.6.5
+Parsing documentation for nio4r-2.0.0
+Installing ri documentation for nio4r-2.0.0
+Parsing documentation for actioncable-5.1.0
+Installing ri documentation for actioncable-5.1.0
+Parsing documentation for globalid-0.4.0
+Installing ri documentation for globalid-0.4.0
+Parsing documentation for activejob-5.1.0
+Installing ri documentation for activejob-5.1.0
+Parsing documentation for mime-types-data-3.2016.0521
+Installing ri documentation for mime-types-data-3.2016.0521
+Parsing documentation for mime-types-3.1
+Installing ri documentation for mime-types-3.1
+Parsing documentation for mail-2.6.5
+Installing ri documentation for mail-2.6.5
+Parsing documentation for actionmailer-5.1.0
+Installing ri documentation for actionmailer-5.1.0
+Parsing documentation for arel-8.0.0
+Installing ri documentation for arel-8.0.0
+Parsing documentation for activemodel-5.1.0
+Installing ri documentation for activemodel-5.1.0
+Parsing documentation for activerecord-5.1.0
+Installing ri documentation for activerecord-5.1.0
+Parsing documentation for rails-5.1.0
+Installing ri documentation for rails-5.1.0
+Done installing documentation for concurrent-ruby, minitest, thread_safe, tzinfo, i18n, activesupport, mini_portile2, nokogiri, rails-dom-testing, loofah, rails-html-sanitizer, erubi, builder, actionview, rack, rack-test, actionpack, sprockets, sprockets-rails, bundler, method_source, thor, railties, websocket-extensions, websocket-driver, nio4r, actioncable, globalid, activejob, mime-types-data, mime-types, mail, actionmailer, arel, activemodel, activerecord, rails after 62 seconds
+37 gems installed
+rubyhou@ubuntu:~$ gem list
+
+*** LOCAL GEMS ***
+
+actioncable (5.1.0)
+actionmailer (5.1.0)
+actionpack (5.1.0)
+actionview (5.1.0)
+activejob (5.1.0)
+activemodel (5.1.0)
+activerecord (5.1.0)
+activesupport (5.1.0)
+arel (8.0.0)
+bigdecimal (1.2.6)
+builder (3.2.3)
+bundler (1.14.6)
+bundler-unload (1.0.2)
+concurrent-ruby (1.0.5)
+erubi (1.6.0)
+executable-hooks (1.3.2)
+gem-wrappers (1.2.7)
+globalid (0.4.0)
+i18n (0.8.1)
+io-console (0.4.3)
+json (1.8.1)
+loofah (2.0.3)
+mail (2.6.5)
+method_source (0.8.2)
+mime-types (3.1)
+mime-types-data (3.2016.0521)
+mini_portile2 (2.1.0)
+minitest (5.10.1)
+nio4r (2.0.0)
+nokogiri (1.7.1)
+psych (2.0.8)
+rack (2.0.1)
+rack-test (0.6.3)
+rails (5.1.0)
+rails-dom-testing (2.0.2)
+rails-html-sanitizer (1.0.3)
+railties (5.1.0)
+rake (10.4.2)
+rdoc (4.2.0)
+rubygems-bundler (1.4.4)
+rvm (1.11.3.9)
+sprockets (3.7.1)
+sprockets-rails (3.2.0)
+thor (0.19.4)
+thread_safe (0.3.6)
+tzinfo (1.2.3)
+websocket-driver (0.6.5)
+websocket-extensions (0.1.2)
+rubyhou@ubuntu:~$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+rubyhou@ubuntu:~$ mkdir learngit
+rubyhou@ubuntu:~$ cd learngit
+rubyhou@ubuntu:~/learngit$ git init .
+Initialized empty Git repository in /home/rubyhou/learngit/.git/
+rubyhou@ubuntu:~/learngit$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+rubyhou@ubuntu:~/learngit$ vim readme
+The program 'vim' can be found in the following packages:
+ * vim
+ * vim-gnome
+ * vim-tiny
+ * vim-athena
+ * vim-athena-py2
+ * vim-gnome-py2
+ * vim-gtk
+ * vim-gtk-py2
+ * vim-gtk3
+ * vim-gtk3-py2
+ * vim-nox
+ * vim-nox-py2
+Try: sudo apt install <selected package>
+rubyhou@ubuntu:~/learngit$ get list
+No command 'get' found, but there are 18 similar ones
+get: command not found
+rubyhou@ubuntu:~/learngit$ gem list
+
+*** LOCAL GEMS ***
+
+actioncable (5.1.0)
+actionmailer (5.1.0)
+actionpack (5.1.0)
+actionview (5.1.0)
+activejob (5.1.0)
+activemodel (5.1.0)
+activerecord (5.1.0)
+activesupport (5.1.0)
+arel (8.0.0)
+bigdecimal (1.2.6)
+builder (3.2.3)
+bundler (1.14.6)
+bundler-unload (1.0.2)
+concurrent-ruby (1.0.5)
+erubi (1.6.0)
+executable-hooks (1.3.2)
+gem-wrappers (1.2.7)
+globalid (0.4.0)
+i18n (0.8.1)
+io-console (0.4.3)
+json (1.8.1)
+loofah (2.0.3)
+mail (2.6.5)
+method_source (0.8.2)
+mime-types (3.1)
+mime-types-data (3.2016.0521)
+mini_portile2 (2.1.0)
+minitest (5.10.1)
+nio4r (2.0.0)
+nokogiri (1.7.1)
+psych (2.0.8)
+rack (2.0.1)
+rack-test (0.6.3)
+rails (5.1.0)
+rails-dom-testing (2.0.2)
+rails-html-sanitizer (1.0.3)
+railties (5.1.0)
+rake (10.4.2)
+rdoc (4.2.0)
+rubygems-bundler (1.4.4)
+rvm (1.11.3.9)
+sprockets (3.7.1)
+sprockets-rails (3.2.0)
+thor (0.19.4)
+thread_safe (0.3.6)
+tzinfo (1.2.3)
+websocket-driver (0.6.5)
+websocket-extensions (0.1.2)
+rubyhou@ubuntu:~/learngit$ rails new learnRails
+      create  
+      create  README.md
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /home/rubyhou/learngit/learnRails/.git/
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_1.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/fixtures/files
+      create  test/fixtures/files/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  test/system
+      create  test/system/.keep
+      create  test/application_system_test_case.rb
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  package.json
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_1.rb
+         run  bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Installing rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.6.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 2.0.0
+Using websocket-extensions 0.1.2
+Using mime-types-data 3.2016.0521
+Using arel 8.0.0
+Installing public_suffix 2.0.5
+Installing bindex 0.5.0 with native extensions
+Using bundler 1.14.6
+Installing byebug 9.0.6 with native extensions
+Installing ffi 1.9.18 with native extensions
+Installing coffee-script-source 1.12.2
+Installing execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Installing multi_json 1.12.1
+Installing rb-fsevent 0.9.8
+Installing ruby_dep 1.5.0
+Installing puma 3.8.2 with native extensions
+Installing rubyzip 1.2.1
+Installing sass 3.4.23
+Installing tilt 2.0.7
+Installing websocket 1.2.4
+Installing sqlite3 1.3.13 with native extensions
+Installing turbolinks-source 5.0.2
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using websocket-driver 0.6.5
+Using mime-types 3.1
+Installing addressable 2.5.1
+Installing childprocess 0.6.3
+Installing rb-inotify 0.9.8
+Installing coffee-script 2.4.1
+Installing uglifier 3.2.0
+Installing turbolinks 5.0.1
+Using activesupport 5.1.0
+Using loofah 2.0.3
+Installing xpath 2.0.0
+Using mail 2.6.5
+Installing selenium-webdriver 3.4.0
+Installing listen 3.1.5
+Using rails-dom-testing 2.0.2
+Using globalid 0.4.0
+Using activemodel 5.1.0
+Installing jbuilder 2.6.3
+Installing spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Installing capybara 2.13.0
+Using activejob 5.1.0
+Using activerecord 5.1.0
+Installing spring-watcher-listen 2.0.1
+Using actionview 5.1.0
+Using actionpack 5.1.0
+Using actioncable 5.1.0
+Using actionmailer 5.1.0
+Using railties 5.1.0
+Using sprockets-rails 3.2.0
+Installing coffee-rails 4.2.1
+Installing web-console 3.5.0
+Using rails 5.1.0
+Installing sass-rails 5.0.6
+Bundle complete! 16 Gemfile dependencies, 70 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+rubyhou@ubuntu:~/learngit$ subl shop
+No command 'subl' found, did you mean:
+ Command 'publ' from package 'atfs' (universe)
+ Command 'subs' from package 'libsubtitles-perl' (universe)
+subl: command not found
+rubyhou@ubuntu:~/learngit$ subl learnRails
+No command 'subl' found, did you mean:
+ Command 'publ' from package 'atfs' (universe)
+ Command 'subs' from package 'libsubtitles-perl' (universe)
+subl: command not found
+rubyhou@ubuntu:~/learngit$ list
+No command 'list' found, did you mean:
+ Command 'last' from package 'util-linux' (main)
+ Command 'bist' from package 'bist' (universe)
+ Command 'hist' from package 'loki' (universe)
+ Command 'klist' from package 'krb5-user' (universe)
+ Command 'klist' from package 'heimdal-clients' (universe)
+ Command 'lift' from package 'lift' (universe)
+ Command 'flist' from package 'nmh' (universe)
+ Command 'gist' from package 'yorick' (universe)
+ Command 'dist' from package 'nmh' (universe)
+list: command not found
+rubyhou@ubuntu:~/learngit$ ls
+learnRails
+rubyhou@ubuntu:~/learngit$ cd learnRails
+rubyhou@ubuntu:~/learngit/learnRails$ ls
+app     config.ru  Gemfile.lock  package.json  README.md  vendor
+bin     db         lib           public        test
+config  Gemfile    log           Rakefile      tmp
+rubyhou@ubuntu:~/learngit/learnRails$ umake web visual-studio-code
+The program 'umake' is currently not installed. You can install it by typing:
+sudo apt install ubuntu-make
+rubyhou@ubuntu:~/learngit/learnRails$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+[sudo] password for rubyhou: 
+ This ppa proposes package backport of Ubuntu make for supported releases.
+ More info: https://launchpad.net/~ubuntu-desktop/+archive/ubuntu/ubuntu-make
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmp45sbp2km/secring.gpg' created
+gpg: keyring `/tmp/tmp45sbp2km/pubring.gpg' created
+gpg: requesting key A1231595 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmp45sbp2km/trustdb.gpg: trustdb created
+gpg: key A1231595: public key "Launchpad PPA for Ubuntu Desktop" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+rubyhou@ubuntu:~/learngit/learnRails$ apt-get update
+W: chmod 0700 of directory /var/lib/apt/lists/partial failed - SetupAPTPartialDirectory (1: Operation not permitted)
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+rubyhou@ubuntu:~/learngit/learnRails$ sudo apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu xenial InRelease                     
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]    
+Get:3 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu xenial InRelease [17.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]     
+Get:5 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu xenial/main amd64 Packages [724 B]
+Get:6 http://us.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]  
+Get:7 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu xenial/main i386 Packages [724 B]
+Get:8 http://us.archive.ubuntu.com/ubuntu xenial-updates/main amd64 DEP-11 Metadata [289 kB]
+Get:9 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu xenial/main Translation-en [508 B]
+Get:10 http://security.ubuntu.com/ubuntu xenial-security/main amd64 DEP-11 Metadata [54.6 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu xenial-updates/main DEP-11 64x64 Icons [189 kB]
+Get:12 http://security.ubuntu.com/ubuntu xenial-security/main DEP-11 64x64 Icons [50.7 kB]
+Get:13 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 DEP-11 Metadata [32.2 kB]
+Get:14 http://security.ubuntu.com/ubuntu xenial-security/universe DEP-11 64x64 Icons [37.0 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 DEP-11 Metadata [160 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe DEP-11 64x64 Icons [188 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 DEP-11 Metadata [2,520 B]
+Get:18 http://us.archive.ubuntu.com/ubuntu xenial-backports/main amd64 DEP-11 Metadata [3,328 B]
+Fetched 1,332 kB in 5s (262 kB/s)                                             
+Reading package lists... Done
+rubyhou@ubuntu:~/learngit/learnRails$ sudo apt-get install ubuntu-make
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python3-argcomplete python3-gnupg python3-progressbar python3-yaml
+The following NEW packages will be installed:
+  python3-argcomplete python3-gnupg python3-progressbar python3-yaml
+  ubuntu-make
+0 upgraded, 5 newly installed, 0 to remove and 162 not upgraded.
+Need to get 212 kB of archives.
+After this operation, 1,065 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 python3-argcomplete all 0.8.1-1ubuntu2 [22.1 kB]
+Get:2 http://ppa.launchpad.net/ubuntu-desktop/ubuntu-make/ubuntu xenial/main amd64 ubuntu-make all 17.03~xenial1 [68.2 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 python3-gnupg all 0.3.8-2 [16.1 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 python3-progressbar all 2.3-2 [9,570 B]
+Get:5 http://us.archive.ubuntu.com/ubuntu xenial/main amd64 python3-yaml amd64 3.11-3build1 [95.6 kB]
+Fetched 212 kB in 1s (130 kB/s)                                        
+Selecting previously unselected package python3-argcomplete.
+(Reading database ... 177643 files and directories currently installed.)
+Preparing to unpack .../python3-argcomplete_0.8.1-1ubuntu2_all.deb ...
+Unpacking python3-argcomplete (0.8.1-1ubuntu2) ...
+Selecting previously unselected package python3-gnupg.
+Preparing to unpack .../python3-gnupg_0.3.8-2_all.deb ...
+Unpacking python3-gnupg (0.3.8-2) ...
+Selecting previously unselected package python3-progressbar.
+Preparing to unpack .../python3-progressbar_2.3-2_all.deb ...
+Unpacking python3-progressbar (2.3-2) ...
+Selecting previously unselected package python3-yaml.
+Preparing to unpack .../python3-yaml_3.11-3build1_amd64.deb ...
+Unpacking python3-yaml (3.11-3build1) ...
+Selecting previously unselected package ubuntu-make.
+Preparing to unpack .../ubuntu-make_17.03~xenial1_all.deb ...
+Unpacking ubuntu-make (17.03~xenial1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up python3-argcomplete (0.8.1-1ubuntu2) ...
+Setting up python3-gnupg (0.3.8-2) ...
+Setting up python3-progressbar (2.3-2) ...
+Setting up python3-yaml (3.11-3build1) ...
+Setting up ubuntu-make (17.03~xenial1) ...
+rubyhou@ubuntu:~/learngit/learnRails$ umake web visual-studio-codeWARNING: Visual Studio Code is now in the ide category, please refer it from this category from now on. This compatibility will be dropped after Ubuntu 16.04 LTS.
+Choose installation path: /home/rubyhou/.local/share/umake/web/visual-studio-code
+MICROSOFT SOFTWARE LICENSE TERMS
+MICROSOFT VISUAL STUDIO CODE
+
+These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and
+you. They apply to the software named above. The terms also apply to any Microsoft services or updates for the software,
+except to the extent those have additional terms.
+
+
+IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW.
+
+
+INSTALLATION AND USE RIGHTS.
+
+General. You may use any number of copies of the software to develop and test your applications,
+including deployment within your internal corporate network.
+Demo use. The uses permitted above include use of the software in demonstrating your
+applications.
+
+Backup copy. You may make one or more backup copies of the software, for reinstalling
+the software.
+Third Party Programs.
+
+
+The software may include third party components with separate legal notices or governed by other agreements, as described
+in the ThirdPartyNotices file accompanying the software. Even if such components are governed
+by other agreements, the disclaimers and the limitations on and exclusions of damages below also
+apply.
+
+
+The software contains third party components licensed under open source licenses with source code availability obligations.
+Copies of those licenses are included in the ThirdPartyNotices file or accompanying credits file.
+You may obtain the complete corresponding source code from us if and as required under the relevant
+open source licenses by sending a money order or check for $5.00 to: Source Code Compliance Team,
+Microsoft Corporation, 1 Microsoft Way, Redmond, WA 98052 USA. Please write ¡°third party source
+code for Visual Studio Code¡± in the memo line of your payment. We may also make the source available
+at
+http://thirdpartysource.microsoft.com/.
+
+
+Extensions.The software gives you the option to download other Microsoft and third party
+software packages from our extension marketplace or package managers. Those packages are under their
+own licenses, and not this agreement. Microsoft does not distribute, license or provide any warranties
+for any of the third party packages.
+
+
+
+
+DATA. The software may collect information about you and your use of the software, and send
+that to Microsoft. Microsoft may use this information to provide services and improve our products and services.
+There may also be some features in the software that enable you to collect data from users of your applications.
+If you use these features to enable data collection in your applications, you must comply with applicable
+law, including providing appropriate notices to users of your applications. You can learn more about data
+collection and use in the help documentation and the privacy statement at http://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409.
+Your use of the software operates as your consent to these practices.
+
+
+
+UPDATES. The software may install automatic updates. By using the software, you agree to
+receive automatic updates without any additional notice, and permit Microsoft to download and install them
+for you. If you do not want automatic updates, you may turn them off by following the instructions in the
+documentation at http://go.microsoft.com/fwlink/?LinkID=616397.
+
+
+FEEDBACK. If you give feedback about the software to Microsoft, you give to Microsoft, without
+charge, the right to use, share and commercialize your feedback in any way and for any purpose. You will
+not give feedback that is subject to a license that requires Microsoft to license its software or documentation
+to third parties because we include your feedback in them. These rights survive this agreement.
+
+
+SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you some
+rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights
+despite this limitation, you may use the software only as expressly permitted in this agreement. In doing
+so, you must comply with any technical limitations in the software that only allow you to use it in certain
+ways. You may not
+
+work around any technical limitations in the software;
+reverse engineer, decompile or disassemble the software, or otherwise attempt to derive the source code
+for the software except, and solely to the extent: (i) permitted by applicable law, despite this
+limitation; or (ii) required to debug changes to any libraries licensed under the GNU Lesser General
+Public License which are included with and linked to by the software;
+
+remove, minimize, block or modify any notices of Microsoft or its suppliers in the software;
+use the software in any way that is against the law; or
+share, publish, or lend the software, or provide it as a hosted solution for others to use, or transfer
+the software or this agreement to any third party.
+
+
+
+SUPPORT SERVICES. Because this software is ¡°as is,¡± we may not provide support services for
+it.
+
+ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-based services
+and support services that you use, are the entire agreement for the software and support services.
+
+EXPORT RESTRICTIONS. Microsoft software, online services, professional services and related
+technology are subject to U.S. export jurisdiction. You must comply with all applicable international and
+national laws including the U.S. Export Administration Regulations, the International Traffic in Arms Regulations,
+Office of Foreign Assets Control sanction programs, and end-user, end use and destination restrictions by
+the U.S. and other governments related to Microsoft products, services and technologies. For additional information,
+see http://www.microsoft.com/exporting.
+
+
+APPLICABLE LAW. If you acquired the software in the United States, Washington law applies
+to interpretation of and claims for breach of this agreement, and the laws of the state where you live apply
+to all other claims. If you acquired the software in any other country, its laws apply.
+
+
+LEGAL EFFECT. This agreement describes certain legal rights. You may have other rights under
+the laws of your state or country. This agreement does not change your rights under the laws of your state
+or country if the laws of your state or country do not permit it to do so. Without limiting the foregoing,
+for Australia, YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.
+
+
+DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS."" YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+
+ LIMITATION ON AND EXCLUSION OF DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.
+
+This limitation applies to (a) anything related to the software, services, content (including code) on third party Internet
+sites, or third party applications; and (b) claims for breach of contract, breach of warranty, guarantee
+or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
+
+It also applies even if Microsoft knew or should have known about the possibility of the damages. The above
+limitation or exclusion may not apply to you because your state or country may not allow the exclusion
+or limitation of incidental, consequential or other damages.
+[I Accept (a)/I don't accept (N)] a
+Downloading and installing requirements                                        |
+100% |#########################################################################|
+Installing Visual Studio Code
+|##############################################################################|
+Installation done
+rubyhou@ubuntu:~/learngit/learnRails$ bundle install
+Resolving dependencies...
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.6.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 2.0.0
+Using websocket-extensions 0.1.2
+Using mime-types-data 3.2016.0521
+Using arel 8.0.0
+Using public_suffix 2.0.5
+Using bindex 0.5.0
+Using bundler 1.14.6
+Using byebug 9.0.6
+Using ffi 1.9.18
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using multi_json 1.12.1
+Using rb-fsevent 0.9.8
+Using ruby_dep 1.5.0
+Using puma 3.8.2
+Using rubyzip 1.2.1
+Using sass 3.4.23
+Using tilt 2.0.7
+Using websocket 1.2.4
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.2
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using websocket-driver 0.6.5
+Using mime-types 3.1
+Using addressable 2.5.1
+Using childprocess 0.6.3
+Using rb-inotify 0.9.8
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using turbolinks 5.0.1
+Using activesupport 5.1.0
+Using loofah 2.0.3
+Using xpath 2.0.0
+Using mail 2.6.5
+Using selenium-webdriver 3.4.0
+Using listen 3.1.5
+Using rails-dom-testing 2.0.2
+Using globalid 0.4.0
+Using activemodel 5.1.0
+Using jbuilder 2.6.3
+Using spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.13.0
+Using activejob 5.1.0
+Using activerecord 5.1.0
+Using spring-watcher-listen 2.0.1
+Using actionview 5.1.0
+Using actionpack 5.1.0
+Using actioncable 5.1.0
+Using actionmailer 5.1.0
+Using railties 5.1.0
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.2.1
+Using web-console 3.5.0
+Using rails 5.1.0
+Using sass-rails 5.0.6
+Bundle complete! 16 Gemfile dependencies, 70 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+rubyhou@ubuntu:~/learngit/learnRails$ rails s
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:94:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+Backtrace for gem load error is:
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+/home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Bundler Error Backtrace:
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:90:in `block (2 levels) in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+	from /home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+rubyhou@ubuntu:~/learngit/learnRails$ rails s
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:94:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+Backtrace for gem load error is:
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+/home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Bundler Error Backtrace:
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:90:in `block (2 levels) in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+	from /home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+rubyhou@ubuntu:~/learngit/learnRails$ bundle install
+Using rake 12.0.0
+Using concurrent-ruby 1.0.5
+Using i18n 0.8.1
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubi 1.6.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 2.0.0
+Using websocket-extensions 0.1.2
+Using mime-types-data 3.2016.0521
+Using arel 8.0.0
+Using public_suffix 2.0.5
+Using bindex 0.5.0
+Using byebug 9.0.6
+Using ffi 1.9.18
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using method_source 0.8.2
+Using thor 0.19.4
+Using multi_json 1.12.1
+Using rb-fsevent 0.9.8
+Using ruby_dep 1.5.0
+Using puma 3.8.2
+Using bundler 1.14.6
+Using rubyzip 1.2.1
+Using sass 3.4.23
+Using tilt 2.0.7
+Using websocket 1.2.4
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.2
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using websocket-driver 0.6.5
+Using mime-types 3.1
+Using addressable 2.5.1
+Using childprocess 0.6.3
+Using rb-inotify 0.9.8
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using turbolinks 5.0.1
+Using activesupport 5.1.0
+Using loofah 2.0.3
+Using xpath 2.0.0
+Using mail 2.6.5
+Using selenium-webdriver 3.4.0
+Using listen 3.1.5
+Using rails-dom-testing 2.0.2
+Using globalid 0.4.0
+Using activemodel 5.1.0
+Using jbuilder 2.6.3
+Using spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.13.0
+Using activejob 5.1.0
+Using activerecord 5.1.0
+Using spring-watcher-listen 2.0.1
+Using actionview 5.1.0
+Using actionpack 5.1.0
+Using actioncable 5.1.0
+Using actionmailer 5.1.0
+Using railties 5.1.0
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.2.1
+Using web-console 3.5.0
+Using rails 5.1.0
+Using sass-rails 5.0.6
+Bundle complete! 16 Gemfile dependencies, 70 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+rubyhou@ubuntu:~/learngit/learnRails$ rails s
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:94:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+Backtrace for gem load error is:
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+/home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Bundler Error Backtrace:
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:90:in `block (2 levels) in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+	from /home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+rubyhou@ubuntu:~/learngit/learnRails$ rails server
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:94:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+Backtrace for gem load error is:
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/uglifier-3.2.0/lib/uglifier.rb:5:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+/home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+/home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+/home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+/home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Bundler Error Backtrace:
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:90:in `block (2 levels) in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:86:in `block in require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `each'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler/runtime.rb:75:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/bundler-1.14.6/lib/bundler.rb:107:in `require'
+	from /home/rubyhou/learngit/learnRails/config/application.rb:7:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `require'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:128:in `block in perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `tap'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands/server/server_command.rb:125:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command/base.rb:63:in `perform'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/command.rb:44:in `invoke'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/commands.rb:16:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/rails:9:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/rails.rb:28:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client/command.rb:7:in `call'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/client.rb:30:in `run'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/bin/spring:49:in `<top (required)>'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `load'
+	from /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/spring-2.0.1/lib/spring/binstub.rb:31:in `<top (required)>'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `require'
+	from /home/rubyhou/learngit/learnRails/bin/spring:15:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+rubyhou@ubuntu:~/learngit/learnRails$ sudo apt-get install nodejs
+[sudo] password for rubyhou: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libuv1
+The following NEW packages will be installed:
+  libuv1 nodejs
+0 upgraded, 2 newly installed, 0 to remove and 162 not upgraded.
+Need to get 3,218 kB of archives.
+After this operation, 13.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial/universe amd64 libuv1 amd64 1.8.0-1 [57.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 nodejs amd64 4.2.6~dfsg-1ubuntu4.1 [3,161 kB]
+Fetched 3,218 kB in 12s (257 kB/s)                                             
+Selecting previously unselected package libuv1:amd64.
+(Reading database ... 177768 files and directories currently installed.)
+Preparing to unpack .../libuv1_1.8.0-1_amd64.deb ...
+Unpacking libuv1:amd64 (1.8.0-1) ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_4.2.6~dfsg-1ubuntu4.1_amd64.deb ...
+Unpacking nodejs (4.2.6~dfsg-1ubuntu4.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 1 added doc-base file...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libuv1:amd64 (1.8.0-1) ...
+Setting up nodejs (4.2.6~dfsg-1ubuntu4.1) ...
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+Processing triggers for libc-bin (2.23-0ubuntu5) ...
+rubyhou@ubuntu:~/learngit/learnRails$ rails server
+=> Booting Puma
+=> Rails 5.1.0 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.8.2 (ruby 2.2.6-p396), codename: Sassy Salamander
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 127.0.0.1 at 2017-05-04 04:26:48 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 238ms (Views: 9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-04 04:39:25 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rubyhou/.rvm/gems/ruby-2.2.6/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (6.5ms)
+Completed 200 OK in 11ms (Views: 9.4ms)
+
+
+^CExiting
+rubyhou@ubuntu:~/learngit/learnRails$ ruby
+^Cruby: Interrupt
+
+rubyhou@ubuntu:~/learngit/learnRails$ gem list
+
+*** LOCAL GEMS ***
+
+actioncable (5.1.0)
+actionmailer (5.1.0)
+actionpack (5.1.0)
+actionview (5.1.0)
+activejob (5.1.0)
+activemodel (5.1.0)
+activerecord (5.1.0)
+activesupport (5.1.0)
+addressable (2.5.1)
+arel (8.0.0)
+bigdecimal (1.2.6)
+bindex (0.5.0)
+builder (3.2.3)
+bundler (1.14.6)
+bundler-unload (1.0.2)
+byebug (9.0.6)
+capybara (2.13.0)
+childprocess (0.6.3)
+coffee-rails (4.2.1)
+coffee-script (2.4.1)
+coffee-script-source (1.12.2)
+concurrent-ruby (1.0.5)
+erubi (1.6.0)
+execjs (2.7.0)
+executable-hooks (1.3.2)
+ffi (1.9.18)
+gem-wrappers (1.2.7)
+globalid (0.4.0)
+i18n (0.8.1)
+io-console (0.4.3)
+jbuilder (2.6.3)
+json (1.8.1)
+listen (3.1.5)
+loofah (2.0.3)
+mail (2.6.5)
+method_source (0.8.2)
+mime-types (3.1)
+mime-types-data (3.2016.0521)
+mini_portile2 (2.1.0)
+minitest (5.10.1)
+multi_json (1.12.1)
+nio4r (2.0.0)
+nokogiri (1.7.1)
+psych (2.0.8)
+public_suffix (2.0.5)
+puma (3.8.2)
+rack (2.0.1)
+rack-test (0.6.3)
+rails (5.1.0)
+rails-dom-testing (2.0.2)
+rails-html-sanitizer (1.0.3)
+railties (5.1.0)
+rake (12.0.0, 10.4.2)
+rb-fsevent (0.9.8)
+rb-inotify (0.9.8)
+rdoc (4.2.0)
+ruby_dep (1.5.0)
+rubygems-bundler (1.4.4)
+rubyzip (1.2.1)
+rvm (1.11.3.9)
+sass (3.4.23)
+sass-rails (5.0.6)
+selenium-webdriver (3.4.0)
+spring (2.0.1)
+spring-watcher-listen (2.0.1)
+sprockets (3.7.1)
+sprockets-rails (3.2.0)
+sqlite3 (1.3.13)
+thor (0.19.4)
+thread_safe (0.3.6)
+tilt (2.0.7)
+turbolinks (5.0.1)
+turbolinks-source (5.0.2)
+tzinfo (1.2.3)
+uglifier (3.2.0)
+web-console (3.5.0)
+websocket (1.2.4)
+websocket-driver (0.6.5)
+websocket-extensions (0.1.2)
+xpath (2.0.0)
+rubyhou@ubuntu:~/learngit/learnRails$ ruby -v
+ruby 2.2.6p396 (2016-11-15 revision 56800) [x86_64-linux]
+rubyhou@ubuntu:~/learngit/learnRails$ 
