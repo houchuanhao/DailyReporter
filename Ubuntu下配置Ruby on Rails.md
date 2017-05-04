@@ -10,7 +10,7 @@
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`
 [2]
  `sudo apt-get install curl`
-[3] 
+[3]
 `\curl -sSL https://get.rvm.io | bash -s stable`
 执行以上三条命令之后重启（切记，一定要重启）
 重启后输入`rvm -v`来确认rvm安装成功
@@ -132,8 +132,10 @@ sudo apt-get install nodejs
 rails s
 ```
 这时候服务就开启了
-![这里写图片描述](http://img.blog.csdn.net/20170504194304254?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2VsYTA3MDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![成功启动服务](http://img.blog.csdn.net/20170504194304254?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2VsYTA3MDg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 接下来就可以打开浏览器进行访问了
 
 在浏览器中输入0.0.0.0:3000
+![大功告成](img/001.png)
 大功告成！
